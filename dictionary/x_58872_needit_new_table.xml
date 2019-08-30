@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element label="New table" max_length="40" name="x_58872_needit_new_table" type="collection">
+        <element label="new column" max_length="40" name="new_column" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="when needed" mandatory="true" max_length="40" name="u_glide_date_time_1" type="glide_date_time"/>
+        <element label="Requested for" mandatory="true" max_length="32" name="u_requested_for" reference="cmdb_ci_appl_dot_net" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" choice="1" default="legal" label="request type" mandatory="true" max_length="40" name="u_request_type" type="string">
+            <choice>
+                <element inactive_on_update="false" label="human resources" sequence="0" value="hr"/>
+                <element inactive_on_update="false" label="facilities" sequence="1" value="facilities"/>
+                <element inactive_on_update="false" label="legal" sequence="2" value="legal"/>
+            </choice>
+        </element>
+        <element attributes="edge_encryption_enabled=true" choice="1" default="legal1" label="what needed" mandatory="true" max_length="40" name="u_what_needed" type="string">
+            <choice>
+                <element inactive_on_update="false" label="human resources1" sequence="0" value="hr1"/>
+                <element inactive_on_update="false" label="human resources2" sequence="1" value="hr2"/>
+                <element inactive_on_update="false" label="facilitites1" sequence="2" value="facilitites1"/>
+                <element inactive_on_update="false" label="facilitites2" sequence="3" value="facilitites2"/>
+                <element inactive_on_update="false" label="legal1" sequence="4" value="legal1"/>
+                <element inactive_on_update="false" label="legal2" sequence="5" value="legal2"/>
+            </choice>
+        </element>
+        <index name="index">
+            <element name="u_requested_for"/>
+        </index>
+    </element>
+</database>
